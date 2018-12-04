@@ -1,0 +1,43 @@
+/*###### MAIN STYLES######*/
+@import'base/variables.scss';
+@import'base/mixins.scss';
+
+* ,*:before, *:after{
+	box-sizing: $box-sizing;
+	}
+html{
+	font-size: 16px;
+	 font-family: 'Raleway', sans-serif;
+	}
+
+
+body{
+	margin: 0;
+	background: $light;
+	
+	.content{
+		width: 800px;
+		margin: auto;
+		text-align: center;
+	}
+table {
+	width: 100%;
+	margin-top: $margin;
+	border-collapse: collapse;
+	
+th{
+	
+	border: 1px solid $dark;
+	text-align: left;
+	padding: 15px
+		}
+	}
+	
+	.preloader{
+		margin-top: $margin;
+		color: $red;
+	}	
+}
+
+
+	
