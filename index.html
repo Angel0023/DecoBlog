@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css
 ">
+ <!-- Font Awsome Solid CSS -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
 	<!-- Page CSS -->
     <link rel="stylesheet" href="dist/css/style.min.css">
@@ -34,7 +36,9 @@
 				<a href="#" class="nav-link">Contact</a>
 			 </li>
 			 <li class="nav-item">
-				<a href="#" class="nav-link">Login</a>
+				<a href="#loginModal" class="nav-link" data-toggle="modal">
+				<i class="fas fa-sign-in-alt"></i>
+				Login</a>
 			 </li>
 		</nav>
 		
@@ -42,10 +46,54 @@
 
     <!-- JavaScript -->
     <!-- jQuery -->
-    <script src="node_modules/jquery/dist/jquery.min.css"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<!-- Bootstrap JS -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Parsley JS -->
+	<script src="node_modules/parsleyjs/dist/parsley.min.js"></script>
 	<!-- Page JS -->
     <script src="dist/js/app.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		App.init();		
+	});
+	</script>
   </body>
 </html>
+
+<!-- Login modal -->
+<form id="loginForm" novalidate>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="form-group">
+			<label for="email">Email address</label>
+			<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"	required />
+		</div>
+	  <div class="form-group"></div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required />
+		</div>
+	   
+	   
+	   <div class="form-group form-check">
+			<input type="checkbox" class="form-check-input" id="remember" name="remember" />
+			<label class="form-check-label" for="remember">Remember me</label>
+		</div>
+	   </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
