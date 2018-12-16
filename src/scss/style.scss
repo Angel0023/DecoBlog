@@ -24,14 +24,23 @@ body{
 		.nav-item{
 		&:last-child{
 			.nav-link{
-				padding-right: 0;
+				padding-right: 0; 
 				}
 			}
 		}
 	}
 }
+
 .jumbotron{
 	background: url("../../img/header.jpg") no-repeat center center;
 	background-size: cover;
 	color: $light;
+}
+
+.card-img-top {
+    height: 40%;
+}
+
+.footer-nav {
+    background-color: #17191c !important;
 }	
